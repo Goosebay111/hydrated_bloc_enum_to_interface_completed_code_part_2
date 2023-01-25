@@ -1,3 +1,4 @@
+
 import 'package:hydrated_bloc_enum_to_interface_completed_code/item.dart';
 
 abstract class SubjectEvent {}

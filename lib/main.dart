@@ -47,7 +47,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton(
             onPressed: () {
               context
                   .read<SubjectBloc>()
@@ -55,17 +55,17 @@ class MyHomePage extends StatelessWidget {
             },
           ),
           body: SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                DisplayCircleAvatar(),
-                ChipsHolder(),
-              ],
-            ),
-          )),
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            DisplayCircleAvatar(),
+            ChipsHolder(),
+          ],
+        ),
+      )),
     );
   }
 }
@@ -74,6 +74,7 @@ class ChipsHolder extends StatelessWidget {
   const ChipsHolder({
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return Wrap(

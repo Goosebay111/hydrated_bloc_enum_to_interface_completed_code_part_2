@@ -2,6 +2,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:hydrated_bloc_enum_to_interface_completed_code/subject_event.dart';
 import 'package:hydrated_bloc_enum_to_interface_completed_code/subject_state.dart';
 
+
 class SubjectBloc extends HydratedBloc<SubjectEvent, SubjectState> {
   SubjectBloc() : super(SubjectState.initial()) {
     on<ModifySelectionSubjectEvent>((event, emit) {
@@ -13,6 +14,7 @@ class SubjectBloc extends HydratedBloc<SubjectEvent, SubjectState> {
             selectedSubjects: state.selectedSubjects..add(event.item)));
       }
     });
+
     on<AddOneToAllSelectedSubjectsEvent>((event, emit) {
       return emit(SubjectState(
           selectedSubjects: state.selectedSubjects
